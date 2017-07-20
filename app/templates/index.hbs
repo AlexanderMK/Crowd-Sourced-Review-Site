@@ -4,6 +4,6 @@ We hope you find exactly what you're looking for in a place to stay.
 
 <ul>
   {{#each model as |restaurant|}}
-     <li>{{restaurant.name}}'s {{restaurant.type}} in {{restaurant.city}}</li>
+    {{restaurant-tile restaurant=restaurant}}
   {{/each}}
 </ul>
