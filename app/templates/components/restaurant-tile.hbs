@@ -1,0 +1,8 @@
+<li>
+  {{restaurant.name}}'s {{restaurant.type}} in {{restaurant.city}}
+  {{#if isImageShowing }}
+    <p><img src={{restaurant.image}} alt={{restaurant.type}} {{action 'imageHide'}}></p>
+  {{else}}
+    <button {{action 'imageShow'}}>Show image</button>
+  {{/if}}
+</li>
