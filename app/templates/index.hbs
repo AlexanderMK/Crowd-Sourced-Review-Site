@@ -1,1 +1,9 @@
 <h1>Restaurant Crowd-Sourced Review Site</h1>
+
+We hope you find exactly what you're looking for in a place to stay.
+
+<ul>
+  {{#each model as |restaurant|}}
+     <li>{{restaurant.name}}'s {{restaurant.type}} in {{restaurant.city}}</li>
+  {{/each}}
+</ul>
