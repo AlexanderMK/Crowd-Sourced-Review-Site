@@ -5,6 +5,17 @@ export default Ember.Component.extend({
   actions: {
     restaurantFormShow() {
       this.set('addNewRestaurant', true);
-    }
+    },
+
+    saveRestaurant1() {
+      var params = {
+        name: this.get('name'),
+        city: this.get('city'),
+        type: this.get('type'),
+        image: this.get('image'),
+        rating: this.get('rating'),
+      };
+      this.set('addNewRestaurant', false);
+      this.sendAction('saveRestaurant2', params);
   }
 });
