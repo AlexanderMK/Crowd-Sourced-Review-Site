@@ -6,6 +6,12 @@ export default Ember.Route.extend({
   },
 
   actions: {
+    saveRestaurant3(params) {
+      var newRestaurant = this.store.createRecord('restaurant', params);
+      newRestaurant.save();
+      this.transitionTo('index');
+    },
+
     destroyRestaurant(restaurant) {
       restaurant.destroyRecord();
       this.transitionTo('index');
