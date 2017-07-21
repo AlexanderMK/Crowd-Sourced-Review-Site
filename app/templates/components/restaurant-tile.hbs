@@ -1,8 +1,14 @@
-<li>
-  {{restaurant.name}}'s {{restaurant.type}} in {{restaurant.city}}
-  {{#if isImageShowing }}
-    <p><img src={{restaurant.image}} alt={{restaurant.type}} {{action 'imageHide'}}></p>
-  {{else}}
-    <button {{action 'imageShow'}}>Show image</button>
-  {{/if}}
-</li>
+
+  <div class="panel-heading">
+    <h3 class="panel-title">Restaurant</h3>
+  </div>
+  <div class="panel-body">
+    <ul>
+      - {{restaurant.name}}'s {{restaurant.type}} in {{restaurant.city}}
+        {{#if isImageShowing }}
+          <p><img src={{restaurant.image}} alt={{restaurant.type}} {{action 'imageHide'}}></p>
+        {{else}}
+          <button {{action 'imageShow'}}>Show image</button>
+        {{/if}}
+    </ul>
+  </div>
